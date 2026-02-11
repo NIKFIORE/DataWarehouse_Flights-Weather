@@ -12,8 +12,10 @@ L’obiettivo è integrare e unificare più sorgenti di dati eterogenee, mettend
 
 ### 1. Dataset Voli (USA – 2015)
 
-Dataset pubblico contenente informazioni sui voli negli Stati Uniti per l’anno 2015.  
-Include:
+Dataset pubblico disponibile su Kaggle:  
+👉 https://www.kaggle.com/datasets/usdot/flight-delays?select=flights.csv
+
+Contiene informazioni sui voli negli Stati Uniti per l’anno 2015, tra cui:
 
 - Informazioni temporali (anno, mese, giorno, giorno della settimana)
 - Compagnia aerea e numero di volo
@@ -23,7 +25,12 @@ Include:
 - Indicatori di cancellazione o diversione
 - Cause del ritardo (meteo, compagnia, sistema aeroportuale, sicurezza, ecc.)
 
+---
+
 ### 2. Dataset Meteorologici (2011–2017)
+
+Dataset disponibile su Kaggle:  
+👉 https://www.kaggle.com/datasets/selfishgene/historical-hourly-weather-data
 
 Insieme di dataset meteo strutturati come serie temporali orarie, contenenti:
 
@@ -69,6 +76,13 @@ Il Data Warehouse supporta analisi lungo le seguenti dimensioni:
 - Come variano ritardi e cancellazioni al variare delle condizioni meteo?
 - L’impatto del meteo è uniforme tra aeroporti o dipende dalla posizione geografica?
 - Alcune compagnie risultano più resilienti a specifiche condizioni meteorologiche?
+
+---
+
+## Nota sui Dataset
+
+I dataset originali non sono inclusi nella repository a causa delle dimensioni elevate.  
+È possibile scaricarli direttamente dai link Kaggle sopra riportati.
 
 ---
 
