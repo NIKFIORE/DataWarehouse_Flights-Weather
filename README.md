@@ -32,12 +32,11 @@ Contiene informazioni sui voli negli Stati Uniti per l’anno 2015, tra cui:
 Dataset disponibile su Kaggle:  
 👉 https://www.kaggle.com/datasets/selfishgene/historical-hourly-weather-data
 
-Insieme di dataset meteo strutturati come serie temporali orarie, contenenti:
+Insieme di dataset meteo strutturati come serie temporali orarie. Sono stati utilizzati solamente i dataset che contengono le seguenti informazioni:
 
-- Descrizione delle condizioni atmosferiche
-- Velocità del vento
-- Direzione del vento
-- Altre variabili meteorologiche
+- Descrizione delle condizioni atmosferiche (weather_description.csv)
+- Velocità del vento (wind_direction.csv)
+- Direzione del vento (wind_speed.csv)
 
 Ogni dataset contiene una colonna `datetime` e una colonna per ciascuna città/aeroporto.  
 Dopo il filtraggio sull’anno 2015, ciascun dataset meteo presenta circa **8.760 record** (uno per ogni ora dell’anno).
