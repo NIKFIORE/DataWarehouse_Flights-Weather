@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
   <diagram name="Pagina-1" id="TfbauTdo_vckdgL_ZfxT">
-    <mxGraphModel dx="1810" dy="1749" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2253" dy="2010" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -8,52 +8,61 @@
           <mxGeometry height="260" width="570" x="-412.63" y="500" as="geometry" />
         </mxCell>
         <mxCell id="jGbAH0_lzF6AzP5DtZne-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="rullaggio = tempo tra il gate e la pista&amp;nbsp;" vertex="1">
-          <mxGeometry height="30" width="220" x="-400.37" y="70" as="geometry" />
+          <mxGeometry height="30" width="220" x="-390" y="50" as="geometry" />
         </mxCell>
         <mxCell id="jGbAH0_lzF6AzP5DtZne-71" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="&lt;h2 data-start=&quot;143&quot; data-end=&quot;170&quot;&gt;Granularità del fatto&lt;/h2&gt;&lt;p data-start=&quot;172&quot; data-end=&quot;203&quot;&gt;Una riga del fatto rappresenta:&amp;nbsp;&lt;strong data-start=&quot;207&quot; data-end=&quot;259&quot; style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Un singolo volo effettuato in una specifica data&lt;/strong&gt;&lt;/p&gt;" vertex="1">
           <mxGeometry height="90" width="460" x="-400.37" y="-30" as="geometry" />
         </mxCell>
         <mxCell id="jGbAH0_lzF6AzP5DtZne-72" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" value="Flight" vertex="1">
-          <mxGeometry height="364" width="140" x="195.37" y="170" as="geometry" />
+          <mxGeometry height="442" width="140" x="195.37" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="jGbAH0_lzF6AzP5DtZne-79" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Departure Delay" vertex="1">
+        <mxCell id="jGbAH0_lzF6AzP5DtZne-79" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Departure Time" vertex="1">
           <mxGeometry height="26" width="140" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="jGbAH0_lzF6AzP5DtZne-80" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Arrival Delay" vertex="1">
+        <mxCell id="7kuo-eww3FmJgaEX38M1-17" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Departure Delay" vertex="1">
           <mxGeometry height="26" width="140" y="52" as="geometry" />
         </mxCell>
-        <mxCell id="jGbAH0_lzF6AzP5DtZne-82" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Taxi Out" vertex="1">
+        <mxCell id="7kuo-eww3FmJgaEX38M1-19" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Arrival Time" vertex="1">
           <mxGeometry height="26" width="140" y="78" as="geometry" />
         </mxCell>
-        <mxCell id="jGbAH0_lzF6AzP5DtZne-87" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Taxi In" vertex="1">
+        <mxCell id="jGbAH0_lzF6AzP5DtZne-80" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Arrival Delay" vertex="1">
           <mxGeometry height="26" width="140" y="104" as="geometry" />
         </mxCell>
-        <mxCell id="jGbAH0_lzF6AzP5DtZne-88" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Air Time" vertex="1">
+        <mxCell id="jGbAH0_lzF6AzP5DtZne-82" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Taxi Out" vertex="1">
           <mxGeometry height="26" width="140" y="130" as="geometry" />
         </mxCell>
-        <mxCell id="jGbAH0_lzF6AzP5DtZne-89" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Elapsed Time" vertex="1">
+        <mxCell id="jGbAH0_lzF6AzP5DtZne-87" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Taxi In" vertex="1">
           <mxGeometry height="26" width="140" y="156" as="geometry" />
         </mxCell>
-        <mxCell id="jGbAH0_lzF6AzP5DtZne-90" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Scheduled Time" vertex="1">
+        <mxCell id="7kuo-eww3FmJgaEX38M1-15" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Wheels on" vertex="1">
           <mxGeometry height="26" width="140" y="182" as="geometry" />
         </mxCell>
-        <mxCell id="jGbAH0_lzF6AzP5DtZne-92" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Distance" vertex="1">
+        <mxCell id="7kuo-eww3FmJgaEX38M1-16" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Wheels off" vertex="1">
           <mxGeometry height="26" width="140" y="208" as="geometry" />
         </mxCell>
-        <mxCell id="jGbAH0_lzF6AzP5DtZne-91" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Air System Delay" vertex="1">
+        <mxCell id="jGbAH0_lzF6AzP5DtZne-88" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Air Time" vertex="1">
           <mxGeometry height="26" width="140" y="234" as="geometry" />
         </mxCell>
-        <mxCell id="jGbAH0_lzF6AzP5DtZne-93" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Security Delay" vertex="1">
+        <mxCell id="jGbAH0_lzF6AzP5DtZne-89" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Elapsed Time" vertex="1">
           <mxGeometry height="26" width="140" y="260" as="geometry" />
         </mxCell>
-        <mxCell id="jGbAH0_lzF6AzP5DtZne-94" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Airline Delay" vertex="1">
+        <mxCell id="jGbAH0_lzF6AzP5DtZne-92" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Distance" vertex="1">
           <mxGeometry height="26" width="140" y="286" as="geometry" />
         </mxCell>
-        <mxCell id="jGbAH0_lzF6AzP5DtZne-95" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Late Aircraft Delay" vertex="1">
+        <mxCell id="jGbAH0_lzF6AzP5DtZne-91" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Air System Delay" vertex="1">
           <mxGeometry height="26" width="140" y="312" as="geometry" />
         </mxCell>
-        <mxCell id="jGbAH0_lzF6AzP5DtZne-96" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Weather Delay" vertex="1">
+        <mxCell id="jGbAH0_lzF6AzP5DtZne-93" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Security Delay" vertex="1">
           <mxGeometry height="26" width="140" y="338" as="geometry" />
+        </mxCell>
+        <mxCell id="jGbAH0_lzF6AzP5DtZne-94" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Airline Delay" vertex="1">
+          <mxGeometry height="26" width="140" y="364" as="geometry" />
+        </mxCell>
+        <mxCell id="jGbAH0_lzF6AzP5DtZne-95" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Late Aircraft Delay" vertex="1">
+          <mxGeometry height="26" width="140" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="jGbAH0_lzF6AzP5DtZne-96" parent="jGbAH0_lzF6AzP5DtZne-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="Weather Delay" vertex="1">
+          <mxGeometry height="26" width="140" y="416" as="geometry" />
         </mxCell>
         <mxCell id="jGbAH0_lzF6AzP5DtZne-97" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="&lt;ul&gt;&lt;li data-start=&quot;473&quot; data-end=&quot;514&quot;&gt;&lt;p data-start=&quot;475&quot; data-end=&quot;514&quot;&gt;Departure Delay (ritardo alla partenza)&lt;/p&gt;&lt;/li&gt;&lt;li data-start=&quot;515&quot; data-end=&quot;551&quot;&gt;&lt;p data-start=&quot;517&quot; data-end=&quot;551&quot;&gt;Arrival Delay (ritardo all’arrivo)&lt;/p&gt;&lt;/li&gt;&lt;li data-start=&quot;552&quot; data-end=&quot;593&quot;&gt;&lt;p data-start=&quot;554&quot; data-end=&quot;593&quot;&gt;Taxi Out (tempo di rullaggio in uscita)&lt;/p&gt;&lt;/li&gt;&lt;li data-start=&quot;594&quot; data-end=&quot;635&quot;&gt;&lt;p data-start=&quot;596&quot; data-end=&quot;635&quot;&gt;Taxi In (tempo di rullaggio in entrata)&lt;/p&gt;&lt;/li&gt;&lt;li data-start=&quot;636&quot; data-end=&quot;672&quot;&gt;&lt;p data-start=&quot;638&quot; data-end=&quot;672&quot;&gt;Air Time (tempo effettivo in volo)&lt;/p&gt;&lt;/li&gt;&lt;li data-start=&quot;673&quot; data-end=&quot;713&quot;&gt;&lt;p data-start=&quot;675&quot; data-end=&quot;713&quot;&gt;Elapsed Time (durata totale effettiva)&lt;/p&gt;&lt;/li&gt;&lt;li data-start=&quot;714&quot; data-end=&quot;748&quot;&gt;&lt;p data-start=&quot;716&quot; data-end=&quot;748&quot;&gt;Scheduled Time (durata prevista)&lt;/p&gt;&lt;/li&gt;&lt;li data-start=&quot;749&quot; data-end=&quot;779&quot;&gt;&lt;p data-start=&quot;751&quot; data-end=&quot;779&quot;&gt;Distance (distanza del volo)&lt;/p&gt;&lt;/li&gt;&lt;li data-start=&quot;780&quot; data-end=&quot;798&quot;&gt;&lt;p data-start=&quot;782&quot; data-end=&quot;798&quot;&gt;Air System Delay&lt;/p&gt;&lt;/li&gt;&lt;li data-start=&quot;799&quot; data-end=&quot;815&quot;&gt;&lt;p data-start=&quot;801&quot; data-end=&quot;815&quot;&gt;Security Delay&lt;/p&gt;&lt;/li&gt;&lt;li data-start=&quot;816&quot; data-end=&quot;831&quot;&gt;&lt;p data-start=&quot;818&quot; data-end=&quot;831&quot;&gt;Airline Delay&lt;/p&gt;&lt;/li&gt;&lt;li data-start=&quot;832&quot; data-end=&quot;853&quot;&gt;&lt;p data-start=&quot;834&quot; data-end=&quot;853&quot;&gt;Late Aircraft Delay&lt;/p&gt;&lt;/li&gt;&lt;li data-start=&quot;854&quot; data-end=&quot;869&quot;&gt;&lt;p data-start=&quot;856&quot; data-end=&quot;869&quot;&gt;weather Delay&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;" vertex="1">
           <mxGeometry height="370" width="270" x="-425.37" y="120" as="geometry" />
@@ -197,11 +206,11 @@
         <mxCell id="jGbAH0_lzF6AzP5DtZne-127" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="City" vertex="1">
           <mxGeometry height="30" width="40" x="640.37" y="430" as="geometry" />
         </mxCell>
-        <mxCell id="jGbAH0_lzF6AzP5DtZne-128" edge="1" parent="1" style="html=1;verticalAlign=bottom;startArrow=oval;startFill=0;endArrow=none;startSize=8;endFill=0;" value="">
+        <mxCell id="jGbAH0_lzF6AzP5DtZne-128" edge="1" parent="1" style="html=1;verticalAlign=bottom;startArrow=oval;startFill=0;endArrow=none;startSize=8;endFill=0;entryX=1.005;entryY=-0.154;entryDx=0;entryDy=0;entryPerimeter=0;" target="7kuo-eww3FmJgaEX38M1-16" value="">
           <mxGeometry relative="1" width="60" x="-1" y="81" as="geometry">
             <mxPoint x="-70" y="41" as="offset" />
             <mxPoint x="415.37" y="352.5" as="sourcePoint" />
-            <mxPoint x="335.37" y="351.5" as="targetPoint" />
+            <mxPoint x="415" y="280" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="jGbAH0_lzF6AzP5DtZne-129" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="Airline" vertex="1">
