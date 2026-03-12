@@ -1,0 +1,81 @@
+version: "3.9"
+
+networks:
+  app-tier:
+    driver: bridge
+
+services:
+
+  kafka:
+    image: apache/kafka:latest
+    ports:
+      - "9092:9092"
+      - "9093:9093"
+    networks:
+      - app-tier
+    environment:
+      - KAFKA_NODE_ID=1
+      - KAFKA_PROCESS_ROLES=broker,controller
+      - KAFKA_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+      - KAFKA_CONTROLLER_LISTENER_NAMES=CONTROLLER
+      - KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      - KAFKA_CONTROLLER_QUORUM_VOTERS=1@localhost:9093
+      - KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
+      - KAFKA_AUTO_CREATE_TOPICS_ENABLE=true
+      - KAFKA_LOG_DIRS=/tmp/kraft-combined-logs
+
+  cassandra:
+    image: cassandra:4.1
+    ports:
+      - "9042:9042"
+    networks:
+      - app-tier
+    environment:
+      - CASSANDRA_START_RPC=true
+    healthcheck:
+      test: ["CMD", "cqlsh", "-e", "describe keyspaces"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+
+  schema-init:
+    build: .
+    depends_on:
+      cassandra:
+        condition: service_healthy
+    networks:
+      - app-tier
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python create_schema.py
+    restart: "no"
+
+  etl:
+    build: .
+    depends_on:
+      - kafka
+      - schema-init
+    networks:
+      - app-tier
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python ETL.py
+
+  streamlit:
+    build: .
+    depends_on:
+      - cassandra
+    networks:
+      - app-tier
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: streamlit run dashboard.py --server.address=0.0.0.0
