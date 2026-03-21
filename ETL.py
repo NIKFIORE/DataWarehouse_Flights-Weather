@@ -1,3 +1,4 @@
+# type: ignore
 import pandas as pd
 from kafka import KafkaProducer, KafkaConsumer
 import json
