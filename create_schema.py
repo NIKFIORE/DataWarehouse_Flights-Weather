@@ -1,12 +1,17 @@
+# ===============================
+# create_schema.py — Creazione schema Cassandra
+# ===============================
+
 from cassandra.cluster import Cluster
 import time
+
 
 def connect(host="cassandra", max_retries=10):
     for attempt in range(max_retries):
         try:
             cluster = Cluster([host])
             session = cluster.connect()
-            session.default_timeout = 60  # timeout 60s per ogni query
+            session.default_timeout = 60
             print("✅ Connesso a Cassandra")
             print("⏳ Attendo stabilizzazione Cassandra (15s)...")
             time.sleep(15)
@@ -19,21 +24,12 @@ def connect(host="cassandra", max_retries=10):
 
 cluster, session = connect()
 
-# ===============================
-# KEYSPACE
-# ===============================
-
 session.execute("""
 CREATE KEYSPACE IF NOT EXISTS flight_db
 WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
 """)
-print("✅ Keyspace creato")
-
+print("✅ Keyspace")
 session.set_keyspace("flight_db")
-
-# ===============================
-# TABELLE DIMENSIONE
-# ===============================
 
 session.execute("""
 CREATE TABLE IF NOT EXISTS airline (
@@ -93,8 +89,7 @@ CREATE TABLE IF NOT EXISTS weather (
 print("✅ weather")
 
 session.execute("""
-CREATE INDEX IF NOT EXISTS weather_city_idx
-ON weather (city);
+CREATE INDEX IF NOT EXISTS weather_city_idx ON weather (city);
 """)
 print("✅ weather index")
 
@@ -143,6 +138,31 @@ CREATE TABLE IF NOT EXISTS flight (
 );
 """)
 print("✅ flight")
+
+session.execute("""
+CREATE TABLE IF NOT EXISTS flight_weather (
+    id_fw           UUID PRIMARY KEY,
+    flight_date     DATE,
+    origin_iata     TEXT,
+    origin_city     TEXT,
+    departure_delay INT,
+    arrival_delay   INT,
+    distance        DOUBLE,
+    weather_type    TEXT,
+    wind_speed      DOUBLE,
+    wind_direction  TEXT,
+    cancelled       BOOLEAN
+);
+""")
+print("✅ flight_weather")
+
+session.execute("""
+CREATE INDEX IF NOT EXISTS fw_origin_idx  ON flight_weather (origin_iata);
+""")
+session.execute("""
+CREATE INDEX IF NOT EXISTS fw_weather_idx ON flight_weather (weather_type);
+""")
+print("✅ flight_weather indexes")
 
 print("\n🎯 Schema Cassandra creato correttamente.")
 cluster.shutdown()

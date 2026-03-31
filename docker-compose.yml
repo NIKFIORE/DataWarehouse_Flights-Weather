@@ -71,20 +71,23 @@ services:
       - .:/app
     environment:
       - PYTHONUNBUFFERED=1
-    command: python ETL.py
+      - KAGGLE_API_TOKEN=KGAT_012192b9bed3e74e7aac11d78088695e
+    command: python -m etl.main
 
-  streamlit:
+  spark-exporter:
     build: .
-    container_name: streamlit
+    container_name: spark-exporter
     networks:
       - app-tier
     depends_on:
       cassandra:
         condition: service_healthy
-    ports:
-      - "8501:8501"
     volumes:
       - .:/app
     environment:
       - PYTHONUNBUFFERED=1
-    command: streamlit run dashboard.py --server.address=0.0.0.0
+      - GCP_PROJECT_ID=flight-warehouse
+      - GCP_CREDENTIALS_PATH=/app/flight-warehouse-f8b21f5a9cec.json
+      - BQ_DATASET=flight_db
+    command: python etl/spark_exporter.py
+    restart: "no"

@@ -1,7 +1,7 @@
 Dataset/
-echo "flight-warehouse-f8b21f5a9cec.json" >> .gitignore
+flight-warehouse-f8b21f5a9cec.json
 
-# Escludi i file compilati di Python (le icone rosse nell'immagine)
+# Escludi file compilati di Python
 **/__pycache__/
 *.pyc
 *.pyo
