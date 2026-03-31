@@ -1,1 +1,2 @@
 Dataset/
+echo "flight-warehouse-f8b21f5a9cec.json" >> .gitignore
